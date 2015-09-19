@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Delete Products</title>
+<link rel="stylesheet" type="text/css" href="style/main.css">
+<script src="js/jquery-min.js"></script>
+<script src="js/polyfill.js"></script>
+<script src="js/delete.js"></script>
+<script type="text/javascript">
+var baseUrl = "http://69.243.204.126:91/com.northwind.rest/";
+function getBaseUrl(url){
+	//alert(url);
+	//window.location =  baseUrl + url;
+	window.open(baseUrl + url);
+}
+</script>
+</head>
+<body class="body">
+	<div id="get_inventory_for_removal"></div>
+	<br />
+	<div id="delete_response"></div>
+</body>
+</html>

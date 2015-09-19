@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Prodcuts Record</title>
+<link rel="stylesheet" type="text/css" href="style/main.css">
+<script src="js/jquery-min.js"></script>
+<script src="js/polyfill.js"></script>
+<script src="js/post.js"></script>
+<script type="text/javascript">
+var baseUrl = "http://69.243.204.126:91/com.northwind.rest/";
+function getBaseUrl(url){
+	//alert(url);
+	//window.location =  baseUrl + url;
+	window.open(baseUrl + url);
+}
+</script>
+</head>
+<body class="body">
+<h2>Section #2</h2>
+	<b>Description:</b> This section shows the basic <i>"Create"</i> operation of <b><font color="red">C</font>RUD</b> for this API.
+	<p><b>Example 2.1</b>  Insert a Product into the Products Table.</p>
+
+	
+		<form id="insertProduct" name="insertProduct" action="#">
+		<table>
+			<tr>
+				<td>Product Name:</td>
+				<td><input type="text" name="ProductName"
+					id="ProductName" maxlength="50" value="Delicious Apple Pies"></td>
+			</tr>
+			<!-- Made a change to PC_PARTS_CODE input after episode 6, input should ONLY numeric -->
+			<tr>
+				<td>Quantity Per Unit:</td>
+				<td><input type="text" name="QuantityPerUnit" id="QuantityPerUnit"
+					maxlength="10" value="12 pies per box"></td>
+			</tr>
+			<tr>
+				<td>Unit Price:</td>
+				<td><input type="text" name="UnitPrice"
+					id="UnitPrice" maxlength="50" value="12.99"></td>
+			</tr>
+			<tr>
+				<td>Units in Stock:</td>
+				<td><input type="text" name="UnitsInStock"
+					id="UnitsInStock" maxlength="5" value="10"></td>
+			</tr>
+			<tr>
+				<td>Units on order:</td>
+				<td><input type="text" name="UnitsOnOrder" id="UnitsOnOrder"
+					maxlength="100" value="5"></td>
+			</tr>
+			<tr>
+				<td>Reorder Level:</td>
+				<td><input type="text" name="ReorderLevel" id="ReorderLevel"
+					maxlength="100" value="17"></td>
+			</tr>
+			<tr>
+				<td>Discontinued:</td>
+				<td><input type="text" name="Discontinued" id="Discontinued"
+					maxlength="100" value="0"></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="button" name="submit_it" id="submit_it"
+					value="Submit v1"> Using Jackson Mapper</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" name="submit_it2" id="submit_it2"
+					value="Submit v2"> Using JSON Array and Object</td> 
+			</tr>
+		</table>
+	</form>
+	<br />
+	<div id="div_ajaxResponse"></div>
+		
+		<a href="javascript:getBaseUrl('api/v1/products/inventory')">Click Here to see updated list of products and scroll to the bottom</a>
+		<br />
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Products Record</title>
+<link rel="stylesheet" type="text/css" href="style/main.css">
+<script src="js/jquery-min.js"></script>
+<script src="js/polyfill.js"></script>
+<script src="js/put.js"></script>
+<script type="text/javascript">
+var baseUrl = "http://69.243.204.126:91/com.northwind.rest/";
+function getBaseUrl(url){
+	//alert(url);
+	//window.location =  baseUrl + url;
+	window.open(baseUrl + url);
+}
+
+</script>
+</head>
+<body class="body">
+
+<div id="get_inventory"></div>
+	<br />
+	<form id="updateRecord" name="updateRecord" action="#">
+		<table border="1">
+			<tr>
+				<td>Product ID</td>
+				<td id="SET_PRODUCT_ID"></td>
+			</tr>
+			<tr>
+				<td>Product Name</td>
+				<td id="SET_PRODUCT_NAME"></td>
+			</tr>
+			<tr>
+				<td>Quantity per Unit</td>
+				<td id="SET_QUANTITY_PER_UNIT"></td>
+			</tr>
+			<tr>
+				<td>Unit Price</td>
+				<td><input type="text" id="SET_UNIT_PRICE"
+					name="UnitPrice"></td>
+			</tr>
+			<tr>
+				<td>Units in Stock</td>
+				<td id="SET_UNITS_IN_STOCK"></td>
+			</tr>
+			<tr>
+				<td>Units on Order</td>
+				<td id="SET_UNITS_ON_ORDER"></td>
+			</tr>
+			<tr>
+				<td>Re-Order Level</td>
+				<td id="SET_REORDER_LEVEL"></td>
+			</tr>
+			<tr>
+				<td>Discontinued</td>
+				<td id="SET_DISCONTINUED"></td>
+			</tr>
+			<tr>
+				<td><input type="hidden" id="SET_PRODUCTS_PK" name="PRODUCTS_PK"></td>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+	<div id="update_response"></div>
+	<br />
+
+</body>
+</html>
